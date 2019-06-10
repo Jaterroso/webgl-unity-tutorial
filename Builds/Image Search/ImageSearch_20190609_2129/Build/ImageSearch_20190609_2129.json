@@ -1,0 +1,16 @@
+{
+"companyName": "DefaultCompany",
+"productName": "WebGL Tutorial",
+"productVersion": "1.0",
+"dataUrl": "ImageSearch_20190609_2129.data.unityweb",
+"wasmCodeUrl": "ImageSearch_20190609_2129.wasm.code.unityweb",
+"wasmFrameworkUrl": "ImageSearch_20190609_2129.wasm.framework.unityweb",
+"graphicsAPI": ["WebGL 2.0","WebGL 1.0"],
+"webglContextAttributes": {"preserveDrawingBuffer": false},
+"splashScreenStyle": "Dark",
+"backgroundColor": "#231F20",
+"cacheControl": {"default": "must-revalidate"},
+"developmentBuild": false,
+"multithreading": false,
+"unityVersion": "2019.1.0f2"
+}
