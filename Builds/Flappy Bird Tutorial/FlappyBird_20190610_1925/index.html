@@ -8,17 +8,23 @@
     <link rel="stylesheet" href="TemplateData/style.css">
     <script src="TemplateData/UnityProgress.js"></script>
     <script src="Build/UnityLoader.js"></script>
+    <script src="js/onInit.js"></script>
     <script>
-      var unityInstance = UnityLoader.instantiate("unityContainer", "Build/FlappyBird_20190610_1925.json", {onProgress: UnityProgress});
+      window.unityInstance = UnityLoader.instantiate("unityContainer", "Build/FlappyBird_20190610_1925.json", 
+      {
+        onProgress: UnityProgress, 
+        Module: {
+          onRuntimeInitialized: onInit,
+        },
+      });
     </script>
   </head>
   <body>
     <div class="webgl-content">
       <div id="unityContainer" style="width: 960px; height: 600px"></div>
-      <div class="footer">
-        <div class="webgl-logo"></div>
-        <div class="fullscreen" onclick="unityInstance.SetFullscreen(1)"></div>
-        <div class="title">WebGL Tutorial</div>
+      <div class="footer" style="text-align:center";>
+        <div class="flap">PRESS TO FLAP</div>
+        <img id="flapImage" src="images/Square.png" style="border-radius:10px; width:50%; height:50%; cursor:pointer;">
       </div>
     </div>
   </body>
